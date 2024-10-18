@@ -4,7 +4,7 @@ import java.util.Stack;
 public class CalculatorModel implements CalculatorModelInterface{
 	
 	
-	//Model
+	//Modele
 
 	@Override
 	public void add() {
