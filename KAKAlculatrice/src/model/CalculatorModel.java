@@ -5,7 +5,6 @@ public class CalculatorModel implements CalculatorModelInterface{
 
 	@Override
 	public void add() {
-// Vas bien de te foutre BAKAAAAAAAAAA
 		
 	}
 
