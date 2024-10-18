@@ -6,7 +6,6 @@ public class CalculatorModel implements CalculatorModelInterface{
 	@Override
 	public void add() {
 		// On va essayer de faire cette méthode correctement !
-		
 	}
 
 	@Override
