@@ -2,10 +2,10 @@ package model;
 import java.util.Stack;
 
 public class CalculatorModel implements CalculatorModelInterface{
-	
+
 	@Override
 	public void add() {
-		// TODO Auto-generated method stub
+		// On va essayer de faire cette méthode correctement !
 		
 	}
 

@@ -1,7 +1,7 @@
 package model;
 
 public interface CalculatorModelInterface {
-	
+
 	public void add();
 	
 	public void substract();
