@@ -2,8 +2,6 @@ package model;
 
 public interface CalculatorModelInterface {
 	
-	//interface
-	
 	public void add();
 	
 	public void substract();
