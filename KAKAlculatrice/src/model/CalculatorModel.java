@@ -18,7 +18,16 @@ public class CalculatorModel implements CalculatorModelInterface{
 	}
 
 	public void divide() {
-		pile.add(pile.pop() / pile.pop());
+		p1 = pile.pop();
+		p2 = pile.pop();
+		if (p2 != 0) {
+			pile.add(p1 / p2);
+		}
+		else {
+			pile.add(p2);
+			pile.add(p1);
+		}
+		
 	}
 
 	public void opposite() {
@@ -55,5 +64,4 @@ public class CalculatorModel implements CalculatorModelInterface{
 			pile.pop();
 		}
 	}
-
 }
