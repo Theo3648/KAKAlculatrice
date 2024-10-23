@@ -2,64 +2,58 @@ package model;
 import java.util.Stack;
 
 public class CalculatorModel implements CalculatorModelInterface{
+	public String accu;
+	public Stack<Double> pile = new Stack<Double>();
 
-	@Override
 	public void add() {
-		// On va essayer de faire cette méthode correctement !
+		pile.add(pile.pop() + pile.pop());
 	}
 
-	@Override
 	public void substract() {
-		// TODO Auto-generated method stub
-		
+		pile.add(pile.pop() - pile.pop());
 	}
 
-	@Override
 	public void multiply() {
-		// TODO Auto-generated method stub
-		
+		pile.add(pile.pop() * pile.pop());
 	}
 
-	@Override
 	public void divide() {
-		// TODO Auto-generated method stub
-		
+		pile.add(pile.pop() / pile.pop());
 	}
 
-	@Override
 	public void opposite() {
-		// TODO Auto-generated method stub
-		
+		pile.add(- pile.pop());
 	}
 
-	@Override
 	public void push() {
-		// TODO Auto-generated method stub
-		
+		pile.add(Double.parseDouble(accu));
 	}
 
-	@Override
-	public void pop() {
-		// TODO Auto-generated method stub
-		
+	public double pop() {
+		double p = pile.pop();
+		pile.add(p);
+		return p;
 	}
 
-	@Override
 	public void drop() {
-		// TODO Auto-generated method stub
-		
+		pile.pop();
 	}
 
-	@Override
 	public void swap() {
-		// TODO Auto-generated method stub
-		
+		double p1 = pile.pop();
+		double p2 = pile.pop();
+		pile.add(p1);
+		pile.add(p2);
+	}
+	
+	public void clear() {
+		accu = "";
 	}
 
-	@Override
-	public void clear() {
-		// TODO Auto-generated method stub
-		
+	public void clearAll() {
+		while(pile.equals(new Stack<Double>())) {
+			pile.pop();
+		}
 	}
 
 }
